@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sean Miles | Web Design Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script scr="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>SEAN MILES</h1>
+        <a id="skipToContent" href="#projects" style="color:black"><span>Skip to Content &darr;</span></a>
+        <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+        <nav>
+            <ul>
+                <li><a href="#hero"><span>Home</span></a></li>
+                <li><a href="#aboutMe"><span>About</span></a></li>
+                <li><a href="#projects"><span>Projects</span></a></li>
+                <li><a href="#contact"><span>Contact</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuToggle = document.querySelector(".menu-toggle");
+            const navMenu = document.querySelector("nav ul");
+
+            menuToggle.addEventListener("click", (e) => {
+                e.stopPropagation();
+                navMenu.classList.toggle("active");
+            });
+
+            document.addEventListener("click", (e) => {
+                if (
+                    navMenu.classList.contains("active") &&
+                    !navMenu.contains(e.target) &&
+                    !menuToggle.contains(e.target)
+                ) {
+                    navMenu.classList.remove("active");
+                }
+            });
+
+            navMenu.querySelectorAll("a").forEach(link => {
+                link.addEventListener("click", () => {
+                    navMenu.classList.remove("active");
+                });
+            });
+        });
+    </script>
+
+    <a id="backToTop" href="#hero" style="color:black"><span>Back to Top &uarr;</span></a>
+
+    <section id="hero">
+
+        <div class="hero-container">
+
+            <div id="myIntro">
+                <img src="img/Sean Headshot.png" alt="Profile Photo / Headshot of Sean Miles">
+                <h1>Hi, I’m Sean</h1>
+                <p>Freelance Graphic Designer and Aspiring Web Designer, skilled in HTML, CSS, and JavaScript</p>
+                <a href="#projects" class="button"><span>View My Work</span></a>
+                <div class="down-arrow"><a href="#projects" aria-label="Down Arrow"><img class="down-arrow"
+                            src="img/down-arrow.svg" alt="View My Work"></a></div>
+            </div>
+
+            <div id="aboutMe">
+                <img id="icon" src="img/mug-hot-solid-full.svg" alt="Icon of a steaming mug of coffee" title="Cheers!">
+                <h2>About Me</h2>
+                <p class="aboutMe">I’m a creative and collaborative marketing and design professional with a passion for
+                    blending strategy and visual storytelling. My work spans digital, print, and event environments —
+                    from crafting eye-catching campaigns and managing large-scale industry events to developing clean,
+                    user-friendly web designs. I thrive on bringing ideas to life through thoughtful design, efficient
+                    workflows, and attention to detail.<br><br>Always eager to expand my skills, I’m currently focused
+                    on deepening my web design, video, and animation expertise to create more dynamic online
+                    experiences. Whether it’s a branding project, a conference promotion, or a digital campaign, I aim
+                    to make every piece both visually compelling and purposeful.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="projects">
+
+        <h2>Projects</h2>
+
+        <div class="project-grid">
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.pexels.com/photos/29214021/pexels-photo-29214021.jpeg" alt="Project 1">
+                </div>
+                <div class="project-info">
+                    <h3>Red Raspberries</h3>
+                    <p>Short description of the project.</p>
+                    <a href="#" class="button"><span>View Project</span></a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.pexels.com/photos/2294477/pexels-photo-2294477.jpeg" alt="Project 2">
+                </div>
+                <div class="project-info">
+                    <h3>Orange... Oranges</h3>
+                    <p>Short description of the project.</p>
+                    <a href="#" class="button"><span>View Project</span></a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.pexels.com/photos/1343537/pexels-photo-1343537.jpeg" alt="Project 3">
+                </div>
+                <div class="project-info">
+                    <h3>Yellow Lemon</h3>
+                    <p>Short description of the project.</p>
+                    <a href="#" class="button"><span>View Project</span></a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.pexels.com/photos/867349/pexels-photo-867349.jpeg" alt="Project 4">
+                </div>
+                <div class="project-info">
+                    <h3>Green Kiwis</h3>
+                    <p>Short description of the project.</p>
+                    <a href="#" class="button"><span>View Project</span></a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image"><img
+                        src="https://images.pexels.com/photos/32920518/pexels-photo-32920518.jpeg" alt="Project 5">
+                </div>
+                <div class="project-info">
+                    <h3>Blue Berries</h3>
+                    <p>Short description of the project.</p>
+                    <a href="#" class="button"><span>View Project</span></a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.pexels.com/photos/708777/pexels-photo-708777.jpeg" alt="Project 6">
+                </div>
+                <div class="project-info">
+                    <h3>Purple Grapes</h3>
+                    <p>Short description of the project.</p>
+                    <a href="#" class="button"><span>View Project</span></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Let's get creative!</h2>
+        <p>Request a quote. Discuss details for your next creative project. Tell me about your favorite cup of
+            coffee!<br>
+            <img src="img/CoffeeCupIllustration.png"
+                alt="Illustration of a grinning cup of coffee with steam rising from it"
+                title="(Credit: Sean Miles | 2017)">
+        </p>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message"></textarea>
+            <button type="submit">Send</button>
+        </form>
+
+    </section>
+
+    <footer>
+        <div class="footerContent">
+            <p>© 2025 Sean Miles</p>
+        </div>
+        <div class="socialIcons">
+            <a href="https://www.linkedin.com/" aria-label="LinkedIn Profile"><img src="img/linkedin.svg"
+                    alt="LinkedIn Icon"></a>
+            <a href="https://github.com/" aria-label="GitHub Profile"><img src="img/github.svg" alt="GitHub Icon"></a>
+            <a href="https://www.instagram.com/" aria-label="Instagram Profile"><img src="img/instagram.svg"
+                    alt="Instagram Icon"></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
