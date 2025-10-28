@@ -43,7 +43,7 @@ header {
 header h1 {
     font-size: 1.8rem;
     letter-spacing: 1px;
-    color: var(--color-blue);
+    color: rgb(5, 181, 218);
 }
 
 nav ul {
@@ -67,6 +67,7 @@ nav a:focus {
     letter-spacing: 1px;
     transition: 0.1s ease-in-out;
 }
+
 
 /* ========== MOBILE MENU ========== */
 
@@ -106,6 +107,34 @@ nav a:focus {
         margin: 0.5rem 0;
     }
 }
+
+
+/* ========== SkipToContent Button ========== */
+
+#skipToContent {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -120%);
+    z-index: 800;
+
+    background-color: #fff;
+    color: #000;
+    border-radius: 20px;
+    padding: 10px 30px;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 -2px 10px;
+    text-decoration: none;
+    transition: transform 0.25s ease-in-out;
+}
+
+#skipToContent:focus,
+#skipToContent:hover {
+    transform: translate(-50%, 10%);
+}
+
 
 /* ========== HERO SECTION ========== */
 
@@ -167,35 +196,13 @@ nav a:focus {
     flex-basis: 50%;
 }
 
-@media (min-width: 769px) {
-    #hero .hero-container>*:first-child {
-        max-width: 30%;
-    }
-
-    #hero .hero-container>*:last-child {
-        max-width: 50%;
-    }
-}
-
-@media (max-width: 768px) {
-    #hero .hero-container {
-        flex-direction: column;
-        max-width: 90%;
-    }
-
-    #hero .hero-container {
-        gap: 0%;
-    }
-
-}
-
 #hero .myIntro {
     display: flex;
     justify-content: center;
     text-align: center;
 }
 
-#hero h1 {
+#hero h2 {
     font-size: clamp(2rem, 4vw, 4rem);
     max-width: 80%;
     min-width: 300px;
@@ -338,6 +345,7 @@ nav a:focus {
     transition: 0.3s;
 }
 
+
 /* ========== ABOUT ME SECTION ========== */
 
 #about {
@@ -357,7 +365,6 @@ nav a:focus {
     margin: 0 auto 1.5rem;
     color: #555;
 }
-
 
 
 /* ========== PROJECTS SECTION ========== */
@@ -439,7 +446,6 @@ nav a:focus {
     color: #343434;
     margin: 0rem 1rem;
     font-size: 1.2rem;
-    ;
     line-height: 1.4rem;
 }
 
@@ -533,7 +539,9 @@ button:hover {
     z-index: 5;
 }
 
+
 /* ========== FOOTER ========== */
+
 footer {
     position: fixed;
     bottom: 0;
@@ -613,32 +621,6 @@ footer img:focus {
 }
 
 
-/* ========== SkipToContent Button ========== */
-
-#skipToContent {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -120%);
-    z-index: 800;
-
-    background-color: #fff;
-    color: #000;
-    border-radius: 20px;
-    padding: 10px 30px;
-    font-size: 18px;
-    text-align: center;
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.5) 0 -2px 10px;
-    text-decoration: none;
-    transition: transform 0.25s ease-in-out;
-}
-
-#skipToContent:focus,
-#skipToContent:hover {
-    transform: translate(-50%, 10%);
-}
-
 /* ========== RESPONSIVE DESIGN ========== */
 
 @media (max-width: 1024px) {
@@ -674,6 +656,15 @@ footer img:focus {
         gap: 0.5rem;
     }
 
+    #hero .hero-container {
+        flex-direction: column;
+        max-width: 90%;
+    }
+
+    #hero .hero-container {
+        gap: 0%;
+    }
+
     #hero h2 {
         font-size: 1.5rem;
     }
@@ -684,5 +675,15 @@ footer img:focus {
 
     #backToTop {
         display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    #hero .hero-container>*:first-child {
+        max-width: 30%;
+    }
+
+    #hero .hero-container>*:last-child {
+        max-width: 50%;
     }
 }
