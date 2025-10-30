@@ -173,9 +173,15 @@
                 title="(Credit: Sean Miles | 2017)">
         </p>
         <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message"></textarea>
+            <label for="name" class="visually-hidden">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <label for="email" class="visually-hidden">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+            <label for="message" class="visually-hidden">Your Message</label>
+            <textarea id="message" name="message" placeholder="Your Message"></textarea>
+
             <button type="submit">Send</button>
         </form>
 
@@ -195,9 +201,7 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
-
-
