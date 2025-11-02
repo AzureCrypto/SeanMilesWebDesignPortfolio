@@ -37,23 +37,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
     const projectSection = document.getElementById("projects");
+    const overlays = projectSection.querySelectorAll(".background-overlay");
+    const [overlayA, overlayB] = overlays;
     const projectCards = document.querySelectorAll(".project-card");
 
-    const originalBackground = projectSection.style.backgroundImage;
+    let activeOverlay = overlayA;
+    let inactiveOverlay = overlayB;
+    const originalBackground = getComputedStyle(projectSection).backgroundImage;
 
     projectCards.forEach(card => {
         const img = card.querySelector("img");
+        if (!img) return;
         const imgSrc = img.getAttribute("src");
 
         card.addEventListener("mouseenter", () => {
-            projectSection.style.backgroundColor = "#808080";
-            projectSection.style.backgroundImage = `linear-gradient(rgba(120, 120, 120, 0.75), rgba(120, 120, 120, 0.75)), url('${imgSrc}')`;
-            projectSection.style.backgroundSize = "cover";
-            projectSection.style.backgroundPosition = "center";
+            inactiveOverlay.style.backgroundImage =
+                `linear-gradient(rgba(20, 80, 120, 0.25), rgba(20, 80, 120, 1)), url('${imgSrc}')`;
+
+            inactiveOverlay.style.opacity = "1";
+            activeOverlay.style.opacity = "0";
+
+            [activeOverlay, inactiveOverlay] = [inactiveOverlay, activeOverlay];
         });
 
         card.addEventListener("mouseleave", () => {
-            projectSection.style.backgroundImage = originalBackground;
+            inactiveOverlay.style.backgroundImage = originalBackground;
+            inactiveOverlay.style.opacity = "0";
         });
     });
 });
