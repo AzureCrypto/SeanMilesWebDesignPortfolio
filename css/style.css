@@ -565,6 +565,8 @@ button:hover {
     width: 1px;
     height: 1px;
     overflow: hidden;
+    color: black;
+    background-color: white;
 }
 
 
@@ -715,4 +717,5 @@ footer img:focus {
         max-width: 50%;
     }
 }
+
 
