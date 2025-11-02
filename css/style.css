@@ -489,12 +489,12 @@ nav a:focus {
 }
 
 #contact h2 {
-    color: #ffffff;
+    color: #0d1a24;
     font-size: clamp(3rem, 4vw, 4rem);
     text-shadow: #00000086 0px 3px 6px;
     font-weight: 900;
     line-height: 4rem;
-    margin-bottom: 40px;
+    margin-bottom: 16px;
 }
 
 #contact p {
@@ -715,3 +715,4 @@ footer img:focus {
         max-width: 50%;
     }
 }
+
