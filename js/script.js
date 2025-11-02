@@ -1,5 +1,3 @@
-
-
 // ========== Mobile Menu Toggle ==========
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -14,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
         nav.classList.toggle("active");
     });
 });
-
 
 
 // ========== Project Background Image URL Grabber ==========
@@ -66,7 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-
 
 
 // ========== Form Validation ==========
