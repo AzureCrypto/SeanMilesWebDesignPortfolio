@@ -224,7 +224,7 @@ nav a:focus {
 
 #hero img.down-arrow {
     filter: drop-shadow(0px 4px 6px #000000);
-    width: 4rem;
+    width: 3rem;
     display: block;
     margin: 3rem auto;
     animation: bounceFadeFlip 6s ease-in-out infinite;
@@ -371,15 +371,33 @@ nav a:focus {
 /* ========== PROJECTS SECTION ========== */
 
 #projects {
+    position: relative;
     padding: 8rem 2rem;
-    background-color: #808080;
+    background-color: #154e7a;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    transition: background-image 0.5s ease-in-out;
     text-align: center;
     transition-duration: 0.5s;
     box-shadow: inset 0px 0px 300px #000000;
+    overflow: hidden;
+}
+
+#projects .background-overlay {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    box-shadow: inset 0px 0px 300px #000000;
+    z-index: 0;
+}
+
+#projects>*:not(.background-overlay) {
+    position: relative;
+    z-index: 1;
 }
 
 #projects h2 {
@@ -466,7 +484,7 @@ nav a:focus {
 #contact {
     padding: 7rem 3rem;
     height: auto;
-    background: #026073;
+    background: rgb(5, 181, 218);
     text-align: center;
 }
 
@@ -491,12 +509,12 @@ nav a:focus {
     border-radius: 2rem;
     max-width: 700px;
     filter: drop-shadow(#0a4069 0px 3px 5px);
-    background-color: #092438;
+    background-color: #0d1a24;
     z-index: 7;
 }
 
 form {
-    max-width: 400px;
+    width: clamp(400px, 500px, 600px);
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 40px;
@@ -511,14 +529,15 @@ button {
     padding: 0.8rem;
     border: 1px solid #ccc;
     border-radius: 12px;
+    font-size: 1rem;
     font-family: inherit;
 }
 
 button {
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: white;
-    background-color: #8C4600;
+    background-color: #154e7a;
     cursor: pointer;
     transition: 0.3s;
 }
